@@ -19,5 +19,15 @@ pipeline {
                 }
             }
         }
+
+        stage("Run Python File") {
+            steps {
+                script {
+                    sh """
+                    python3 main.py
+                    """
+                }
+            }
+        }
     }
 }
