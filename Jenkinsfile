@@ -14,7 +14,9 @@ pipeline {
         }
         stage("Build Python Environment") {
             steps {
-                commonLib.buildPythonEnvironment()
+                script {
+                    commonLib.buildPythonEnvironment()
+                }
             }
         }
     }
